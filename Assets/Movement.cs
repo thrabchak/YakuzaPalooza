@@ -21,64 +21,50 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+			
+	}
 
+	void FixedUpdate() 
+	{
+		
 		///////////////////////////////////////////
 		/// Getting different components for update
 		moveBound_Rect = moveBound_RectTran.rect;
 		character_RectTran = this.GetComponent<RectTransform>();
 		character_Rect = character_RectTran.rect;
 		background_Rect = background_RectTran.rect;
-
-		////////////////////////////
-		//8 Directional Movement Fix
-		////////////////////////////
-		if ((Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) ||
-		    (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)) ||
-		    (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)) ||
-		    (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)))
-		{
-			speed = 1.4f;
-		}
-		else
-		{
-			speed = 2f;
-		}
-
+		
+		
 		////////////////
 		//Basic Movement
 		////////////////
 		if (Input.GetKey(KeyCode.W))
 		{
 			if(moveBound_RectTran.rect.height/2 > character_RectTran.localPosition.y)
-				transform.Translate(0f, speed * Time.deltaTime,0f);
+				rigidbody2D.transform.Translate(0f, speed * Time.deltaTime,0f);
 			else
 				background_RectTran.transform.Translate(0f, -speed * Time.deltaTime,0f);
 		}
-		
-		if (Input.GetKey(KeyCode.S))
+		else if (Input.GetKey(KeyCode.S))
 		{
 			if(-moveBound_RectTran.rect.height/2 < character_RectTran.localPosition.y)
-				transform.Translate(0f, -speed * Time.deltaTime,0f);
+				rigidbody2D.transform.Translate(0f, -speed * Time.deltaTime,0f);
 			else
 				background_RectTran.transform.Translate(0f, speed * Time.deltaTime,0f);
 		}
-		
-		if (Input.GetKey(KeyCode.A))
+		else if (Input.GetKey(KeyCode.A))
 		{
 			if(-moveBound_RectTran.rect.width/2 < character_RectTran.localPosition.x)
-				transform.Translate(-speed * Time.deltaTime,0f,0f);
+				rigidbody2D.transform.Translate(-speed * Time.deltaTime,0f,0f);
 			else
 				background_RectTran.transform.Translate(speed * Time.deltaTime,0f,0f);
 		}
-		
-		if (Input.GetKey(KeyCode.D))
+		else if (Input.GetKey(KeyCode.D))
 		{
 			if(moveBound_RectTran.rect.width/2 > character_RectTran.localPosition.x)
-				transform.Translate(speed * Time.deltaTime,0f,0f);
+				rigidbody2D.transform.Translate(speed * Time.deltaTime,0f,0f);
 			else
 				background_RectTran.transform.Translate(-speed * Time.deltaTime,0f,0f);
-		}
-
-		
+		}	
 	}
 }
