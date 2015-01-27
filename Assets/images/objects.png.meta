@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 168e1b0340e75854c91285567790d27f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bag
+    21300002: axe
+    21300004: gun
+    21300006: objects_3
+    21300008: ramen
+    21300010: bloody_shirt
+    21300012: sign
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bag
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 235
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: axe
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 236
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gun
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 236
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: objects_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 255
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ramen
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 265
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bloody_shirt
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 267
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 1, y: 0, z: 0, w: 0}
+    - name: sign
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 260
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 1, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
