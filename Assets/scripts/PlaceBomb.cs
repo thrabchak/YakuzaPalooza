@@ -11,6 +11,9 @@ public class PlaceBomb : MonoBehaviour {
 	public Leaveable leaver;
 	public AudioSource trainSound;
 	public AudioSource normalSound;
+	public GameObject pickupSoundObject;
+	public GameObject player;
+	public AudioSource pickupSound;
 
 	void Start(){
 		this.GetComponent<SpriteRenderer> ().enabled = false;
@@ -30,6 +33,8 @@ public class PlaceBomb : MonoBehaviour {
 			normalSound.mute = true;
 			normalSound = trainSound;
 			trainSound.mute = false;
+			pickupSoundObject.transform.position = player.transform.position;
+			pickupSound.PlayDelayed(1.5f);
 		} else if(visitedAlready){
 			textHandler.ShowText (afterText);
 		}

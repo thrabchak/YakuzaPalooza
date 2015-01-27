@@ -9,6 +9,9 @@ public class TriggerEventAndText : MonoBehaviour {
 	public bool visitedAlready = false;
 	public GameObject item;
 	public bool pickUp = true;
+	public AudioSource pickupSound;
+	public GameObject pickupSoundObject;
+	public GameObject player;
 	
 	void OnTriggerEnter2D(Collider2D col){
 		
@@ -16,6 +19,8 @@ public class TriggerEventAndText : MonoBehaviour {
 			textHandler.ShowText (beforeText);
 			visitedAlready = true;
 			item.SetActive(pickUp);
+			pickupSoundObject.transform.position = player.transform.position;
+			pickupSound.PlayDelayed(1.5f);
 		} else {
 			textHandler.ShowText (afterText);
 		}

@@ -6,11 +6,12 @@ public class AudioControllerScript : MonoBehaviour {
 	public AudioSource[] audiosources;
 	public PlayerController pc;
 	public int currentlyPlaying;
+
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < audiosources.Length; i++) {
-			//audiosources[i].Play();
 			audiosources[i].mute = true;
+			audiosources[i].Play();
 		}
 		audiosources[currentlyPlaying].mute = false;
 	}
@@ -21,21 +22,7 @@ public class AudioControllerScript : MonoBehaviour {
 		{
 			audiosources[currentlyPlaying].mute=true;
 			currentlyPlaying = pc.room;
-
-			if(pc.room == 0){
-				audiosources [pc.room].mute = false;
-
-			} else if (pc.room == 1){
-				audiosources [pc.room].mute = false;
-			} else if (pc.room == 2){
-				audiosources [pc.room].mute = false;
-			} else if (pc.room == 3){
-				audiosources [pc.room].mute = false;
-			} else if (pc.room == 4){
-				audiosources [pc.room].mute = false;
-			} else if (pc.room == 5){
-				audiosources [pc.room].mute = false;
-			}
+			audiosources [pc.room].mute = false;
 		}
 	}
 }

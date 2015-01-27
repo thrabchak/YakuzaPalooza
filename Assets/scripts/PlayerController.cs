@@ -72,20 +72,20 @@ public class PlayerController : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.name.Equals ("crimeSceneDoor")) {
+		if (other.gameObject.name.Equals ("theCrimeScene")) {
 				room = 1;
-		} else if (other.gameObject.name.Equals ("DojoDoor")) {
+		} else if (other.gameObject.name.Equals ("theDojo")) {
 				room = 2;
-		} else if (other.gameObject.name.Equals ("RamenShopDoor")) {
+		} else if (other.gameObject.name.Equals ("theRamenShop")) {
 				room = 3;
-		} else if (other.gameObject.name.Equals ("laundryDoor")) {
+		} else if (other.gameObject.name.Equals ("theLaundry")) {
 				room = 4;
-		} else if (other.gameObject.name.Equals ("HelloKittyDoor")) {
+		} else if (other.gameObject.name.Equals ("HelloKittyRoom")) {
 				room = 5;
-		} else if (other.gameObject.name.Equals ("hardwareStoreDoor")) {
+		} else if (other.gameObject.name.Equals ("theHardwareStore")) {
 				room = 6;
 		}
-		else if(!other.tag.Contains("timeline") && !other.tag.Contains("kittyBomb"))
+		else if(other.gameObject.name.Equals ("mainRoom"))
 		{
 			room = 0;
 		}

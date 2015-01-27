@@ -10,7 +10,9 @@ public class HoboTalk : MonoBehaviour {
 	public string afterText;
 	public bool tradedRamen = false;
 	public SpecialDoor hellokittydoor;
-
+	public GameObject pickupSoundObject;
+	public GameObject player;
+	public AudioSource pickupSound;
 
 	int numSayings = 10;
 	//bool ramenTrade = false;
@@ -31,7 +33,7 @@ public class HoboTalk : MonoBehaviour {
 		sayings [8] = "A closed mouth gathers no feet";
 		sayings [9] = "I miss my wife";
 
-		afterText = "Thanks for the ramen, I have a present for you located ... well I forget";
+		afterText = "Thanks for the ramen, my fellow brahmin. Do you hear music coming from a room?";
 
 		}
 
@@ -45,8 +47,9 @@ public class HoboTalk : MonoBehaviour {
 				Bag.SetActive (false);
 				tradedRamen = true;
 				hellokittydoor.isLocked = false;
-		} 
-		else 
+				pickupSoundObject.transform.position = player.transform.position;
+				pickupSound.PlayDelayed(1.5f);
+		}else 
 		{
 			textHandler.ShowText(sayings[cycle]);
 		}
