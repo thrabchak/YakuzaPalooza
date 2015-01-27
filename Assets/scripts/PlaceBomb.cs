@@ -34,7 +34,7 @@ public class PlaceBomb : MonoBehaviour {
 			normalSound = trainSound;
 			trainSound.mute = false;
 			pickupSoundObject.transform.position = player.transform.position;
-			pickupSound.PlayDelayed(1.5f);
+			pickupSound.PlayDelayed(.5f);
 		} else if(visitedAlready){
 			textHandler.ShowText (afterText);
 		}

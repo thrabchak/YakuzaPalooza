@@ -1301,6 +1301,7 @@ MonoBehaviour:
   pickupSound: {fileID: 1446937670}
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
+  hobo: {fileID: 1451981239}
 --- !u!61 &280717329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1400,6 +1401,7 @@ MonoBehaviour:
   pickupSound: {fileID: 1446937670}
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
+  hobo: {fileID: 1451981239}
 --- !u!61 &291922665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3178,7 +3180,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 723504521}
-  lengthInSec: 1
+  lengthInSec: .25
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -3189,7 +3191,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 1.79999995
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3222,7 +3224,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 1
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3346,10 +3348,10 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4278240255
+        rgba: 4288216830
       minMaxState: 0
     startSize:
-      scalar: .200000003
+      scalar: .0500000007
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3414,14 +3416,14 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: 0
+    gravityModifier: -.00999999978
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 500
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 1
-    radius: .100000001
+    radius: .00999999978
     angle: 7.07924461
     length: 5
     boxX: 1
@@ -3429,12 +3431,12 @@ ParticleSystem:
     boxZ: 1
     placementMode: 0
     m_Mesh: {fileID: 0}
-    randomDirection: 0
+    randomDirection: 1
   EmissionModule:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 50
+      scalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3466,7 +3468,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 45
+    cnt0: 50
     cnt1: 30
     cnt2: 30
     cnt3: 30
@@ -3478,7 +3480,7 @@ ParticleSystem:
   SizeModule:
     enabled: 1
     curve:
-      scalar: 1.10000002
+      scalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4095,10 +4097,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4279703455
+          rgba: 4291507198
         key1:
           serializedVersion: 2
-          rgba: 4280427207
+          rgba: 4291507198
         key2:
           serializedVersion: 2
           rgba: 0
@@ -4138,10 +4140,10 @@ ParticleSystem:
       minGradient:
         key0:
           serializedVersion: 2
-          rgba: 4278253823
+          rgba: 4288214782
         key1:
           serializedVersion: 2
-          rgba: 150994943
+          rgba: 2164260863
         key2:
           serializedVersion: 2
           rgba: 4278190080
@@ -4438,6 +4440,7 @@ MonoBehaviour:
   pickupSound: {fileID: 1446937670}
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
+  hobo: {fileID: 1451981239}
 --- !u!61 &795737700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5785,6 +5788,7 @@ MonoBehaviour:
   pickupSound: {fileID: 1446937670}
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
+  hobo: {fileID: 1451981239}
 --- !u!61 &1081587064
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5938,6 +5942,8 @@ MonoBehaviour:
   speed: .0149999997
   variabilityInSpeed: .00100000005
   chanceOfChangeOfSpeed: .25
+  maxSpeed: .0250000004
+  minSpeed: .00400000019
   isInSights: 0
   Sightcounter: 0
   sightDuration: 15
@@ -6103,7 +6109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Color: {r: 0, g: 0, b: 0, a: .776470602}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -7467,7 +7473,7 @@ GameObject:
   - 61: {fileID: 1451981240}
   - 114: {fileID: 1451981239}
   m_Layer: 0
-  m_Name: TalkBox
+  m_Name: HoboTalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7506,6 +7512,7 @@ MonoBehaviour:
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
   pickupSound: {fileID: 1446937670}
+  objectsHidden: 0
 --- !u!61 &1451981240
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7644,7 +7651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .441176474, g: .861257553, b: 1, a: .392156869}
+  m_Color: {r: 0, g: 0, b: 0, a: .776470602}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -8155,6 +8162,8 @@ MonoBehaviour:
   speed: .0149999997
   variabilityInSpeed: .00100000005
   chanceOfChangeOfSpeed: .5
+  maxSpeed: .0250000004
+  minSpeed: .00400000019
   isInSights: 0
   Sightcounter: 0
   sightDuration: 15
@@ -8349,6 +8358,7 @@ MonoBehaviour:
   pickupSound: {fileID: 1446937670}
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
+  hobo: {fileID: 1451981239}
 --- !u!61 &1640841614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8751,6 +8761,8 @@ MonoBehaviour:
   speed: .0149999997
   variabilityInSpeed: .00100000005
   chanceOfChangeOfSpeed: .5
+  maxSpeed: .0250000004
+  minSpeed: .00400000019
   isInSights: 0
   Sightcounter: 0
   sightDuration: 15
@@ -9358,7 +9370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: .996078432, g: .200000003, b: .796078444, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: b75a791fa7729db489ad57cb8e546556, type: 3}
     m_FontSize: 14
@@ -9466,6 +9478,7 @@ MonoBehaviour:
   pickupSound: {fileID: 1446937670}
   pickupSoundObject: {fileID: 1446937669}
   player: {fileID: 864617218}
+  hobo: {fileID: 1451981239}
 --- !u!61 &1927290935
 BoxCollider2D:
   m_ObjectHideFlags: 0

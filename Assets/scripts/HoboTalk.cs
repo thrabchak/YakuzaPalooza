@@ -13,13 +13,11 @@ public class HoboTalk : MonoBehaviour {
 	public GameObject pickupSoundObject;
 	public GameObject player;
 	public AudioSource pickupSound;
+	public int objectsHidden = 0;
 
 	int numSayings = 10;
-	//bool ramenTrade = false;
-	int cycle;
 
 	void Start(){
-		cycle = 0;
 		sayings = new string[numSayings];
 
 		sayings [0] = "If you need to cover up a crime, you have to start by eliminating evidence. Your Lucky Number is 7";
@@ -40,7 +38,7 @@ public class HoboTalk : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if (tradedRamen) {
 			textHandler.ShowText(afterText);
-		} else if (item.activeSelf) 
+		} else if (item.activeSelf && objectsHidden >= 5 )
 		{
 				textHandler.ShowText ("Whoa... Whats that smell?? Do you have Ramen? I'd do ANYTHING for some ramen right now!");
 				item.SetActive (false);
@@ -48,17 +46,20 @@ public class HoboTalk : MonoBehaviour {
 				tradedRamen = true;
 				hellokittydoor.isLocked = false;
 				pickupSoundObject.transform.position = player.transform.position;
-				pickupSound.PlayDelayed(1.5f);
+				pickupSound.PlayDelayed(.5f);
 		}else 
 		{
-			textHandler.ShowText(sayings[cycle]);
+			textHandler.ShowText(sayings[Random.Range(0,sayings.Length)]);
 		}
 		
 	}
 	
+	public void hiddenObjectCounter(){
+		objectsHidden++;
+	}
+	
 	void OnTriggerExit2D(Collider2D col){
 		textHandler.HideText();
-		if(cycle++ >= numSayings) cycle = 0;
 		
 	}
 

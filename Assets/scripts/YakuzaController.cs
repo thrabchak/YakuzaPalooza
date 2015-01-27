@@ -10,6 +10,8 @@ public class YakuzaController : MonoBehaviour {
 	Animator anim;
 	public float variabilityInSpeed = .001f;
 	public float chanceOfChangeOfSpeed = .8f;
+	public float maxSpeed = .025f;
+	public float minSpeed = .004f;
 
 	// Use this for initialization
 	void Start () {
@@ -63,10 +65,14 @@ public class YakuzaController : MonoBehaviour {
 		}
 				
 	float randomVal = Random.value;
-		if (randomVal < chanceOfChangeOfSpeed / 2) {
+		if (randomVal < chanceOfChangeOfSpeed / 2 && speed < maxSpeed && speed > minSpeed) {
 			speed += Random.Range (0, variabilityInSpeed);
-		} else if (randomVal < chanceOfChangeOfSpeed) { 
+		} else if (randomVal < chanceOfChangeOfSpeed && speed < maxSpeed && speed > minSpeed) { 
 			speed -= Random.Range (0, variabilityInSpeed);
+		} else if (speed > maxSpeed) {
+			speed -= 0.001f;
+		} else if (speed < minSpeed) {
+			speed += 0.001f;
 		}
 	}
 	void OnTriggerExit2D(Collider2D collider){

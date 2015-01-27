@@ -12,6 +12,7 @@ public class TriggerEventAndText : MonoBehaviour {
 	public AudioSource pickupSound;
 	public GameObject pickupSoundObject;
 	public GameObject player;
+	public HoboTalk hobo;
 	
 	void OnTriggerEnter2D(Collider2D col){
 		
@@ -20,7 +21,8 @@ public class TriggerEventAndText : MonoBehaviour {
 			visitedAlready = true;
 			item.SetActive(pickUp);
 			pickupSoundObject.transform.position = player.transform.position;
-			pickupSound.PlayDelayed(1.5f);
+			pickupSound.PlayDelayed(.5f);
+			hobo.hiddenObjectCounter();
 		} else {
 			textHandler.ShowText (afterText);
 		}
